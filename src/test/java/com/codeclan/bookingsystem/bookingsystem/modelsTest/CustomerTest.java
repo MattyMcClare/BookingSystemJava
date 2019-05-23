@@ -44,7 +44,7 @@ public class CustomerTest {
 
     @Test
     public void setAge() {
-        customer.setAge(30); 
+        customer.setAge(30);
         assertEquals(30, customer.getAge());
     }
 }

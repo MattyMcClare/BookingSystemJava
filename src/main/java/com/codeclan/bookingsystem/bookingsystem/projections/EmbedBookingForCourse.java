@@ -9,7 +9,7 @@ import java.util.List;
 
 @Projection(name = "embedBookingForCourse", types = Course.class)
 public interface EmbedBookingForCourse {
-    String getName();
+//    String getName();
     String getTown();
     int getRating();
     List<Booking> getBookings();

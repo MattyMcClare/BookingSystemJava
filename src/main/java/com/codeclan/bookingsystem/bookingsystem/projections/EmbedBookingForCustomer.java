@@ -8,7 +8,7 @@ import java.util.List;
 
 @Projection(name = "embedBookingForCustomer", types = Customer.class)
 public interface EmbedBookingForCustomer {
-    String getName();
+//    String getName();
     String getTown();
     int getAge();
     List<Booking> getBookings();

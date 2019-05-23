@@ -22,9 +22,10 @@ public class CustomerRepositoryImpl implements CustomerRepositoryCustom{
         List<Customer> results = null;
         Session session = entityManager.unwrap(Session.class);
         try {
-            Criteria cr = session.createCriteria(Course.class);
-            cr.createAlias("course", "courseAlias");
-            cr.add(Restrictions.eq("courseAlias.name", name));
+            Criteria cr = session.createCriteria(Customer.class);
+            cr.createAlias("bookings", "booking");
+            cr.createAlias("booking.course", "course");
+            cr.add(Restrictions.eq("course.name", name));
             results = cr.list();
         } catch (HibernateException ex){
             ex.printStackTrace();
